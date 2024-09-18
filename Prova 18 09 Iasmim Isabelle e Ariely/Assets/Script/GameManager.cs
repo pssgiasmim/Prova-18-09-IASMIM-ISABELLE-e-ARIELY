@@ -44,14 +44,15 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // Posiciona os jogadores no início do jogo.
-        // Calcula a posição inicial do jogador 1.
-        // Calcula a posição inicial do jogador 2.
+        Vector3 posicaoJogador1 = new Vector3(0, 0.5f, 0);
+        Vector3 posicaoJogador2 = new Vector3((linha - 1 ) * 1.1f, 0.5f, (coluna - 1) * 1.1f);
 
         Camera.main.transform.position = new Vector3(linha / 2f - 0.5f, coluna / 2f - 0.5f, -10);
         Camera.main.orthographicSize = coluna / 2f;
 
-        // Instancia os jogadores nas suas posições iniciais.
+        Instantiate(playerPrefab1, posicaoJogador1, Quaternion.identity);
+        Instantiate(playerPrefab2, posicaoJogador2, Quaternion.identity);
+        
 
     }
 
