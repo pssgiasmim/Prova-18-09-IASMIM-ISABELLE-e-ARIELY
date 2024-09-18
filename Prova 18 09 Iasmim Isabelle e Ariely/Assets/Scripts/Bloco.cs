@@ -36,4 +36,30 @@ public class Bloco : MonoBehaviour
            //notificar Game Manager
         }
     }
+
+    public bool PegarConquistado(int jogadorDono)
+    {
+        if (conquistado == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+           
+    }
+
+    public int PegarJogadorDono(int jogador1 = 1, bool jogadorDono)
+    {
+        if (jogadorDono == true)
+        {
+            return jogador1;
+        }
+        else
+        {
+            return 2;
+        }
+    }
+
 }
