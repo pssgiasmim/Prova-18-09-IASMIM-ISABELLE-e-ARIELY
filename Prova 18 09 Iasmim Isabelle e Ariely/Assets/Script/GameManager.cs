@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
-        grade = new GameObject[linha, coluna];
+         grade = new Bloco [linha, coluna];
 
         CriarGrade();
     }
@@ -35,10 +35,10 @@ public class GameManager : MonoBehaviour
         {
             for (int j = 0; j < coluna; j++)
             {
-                Vector2 posicao = new Vector2(i, j);
+               Vector2 posicao = new Vector2(i, j);
 
-                GameObject bloco = Instantiate(blockPrefab, posicao, Quaternion.identity);
-
+                Bloco bloco = Instantiate (blockPrefab, posicao, Quaternion.identity).GetComponent<Bloco>();
+                
                 grade[i, j] = bloco;
 
             }
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
         contador++;
 
 
-        if (contador =grade)
+        if (contador == grade.Length)
         {
             int contadorDeTerritorioDoJogador1 = 0;
             int contadorDeTerritorioDoJogador2 = 0;
@@ -72,12 +72,12 @@ public class GameManager : MonoBehaviour
                 {
                     Bloco bloco = grade[i, j].GetComponent<Bloco>();
 
-                    if (bloco.dono == 1)
+                    if (Bloco.PegarJogadorDono == 1)
                     {
                         contadorDeTerritorioDoJogador1++;
 
                     }
-                    else if (bloco.dono == 2)
+                    else if (Bloco.PegarJogadorDono == 2)
                     {
                         contadorDeTerritorioDoJogador2++;
                     }
