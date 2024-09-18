@@ -28,12 +28,12 @@ public class Bloco : MonoBehaviour
         {
           jogadorDono = 1;
 
-            GameManager.NotificarConquista(1); // notificar Game Manager
+            GameManager.instance.ConquistarTerritorio(); 
         }
         else  
         {
             jogadorDono = 2;
-            GameManager.NotificarConquista(2);//notificar Game Manager
+            GameManager.instance.ConquistarTerritorio();
         }
     }
 
