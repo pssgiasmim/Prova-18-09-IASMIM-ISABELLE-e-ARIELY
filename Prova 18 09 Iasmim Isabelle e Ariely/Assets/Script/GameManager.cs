@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public float spacing = 1.1f;
 
-    private Bloco[,] blocos;
+    private Bloco[,] grade;
 
     private int contador;
 
@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        grade = new GameObject[linha, coluna];
+
+        CriarGrade();
     }
     
 
