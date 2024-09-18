@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     private Bloco[,] grade;
 
-    private int contador;
+    private int contador = 0;
 
     public static GameManager instance;
 
@@ -53,5 +53,30 @@ public class GameManager : MonoBehaviour
 
         // Instancia os jogadores nas suas posições iniciais.
 
+    }
+
+    public void ConquistarTerritorio()
+    {
+        contador++;
+
+
+        if (contador =grade)
+        {
+            int contadorDeTerritorioDoJogador1 = 0;
+            int contadorDeTerritorioDoJogador2 = 0;
+        
+            foreach (Bloco bloco in grade)
+            {
+                if (bloco = )
+                {
+                    contadorDeTerritorioDoJogador1++;
+                }
+                if (bloco = )
+                {
+                    contadorDeTerritorioDoJogador2++;
+                }
+
+            }
+        }
     }
 }
