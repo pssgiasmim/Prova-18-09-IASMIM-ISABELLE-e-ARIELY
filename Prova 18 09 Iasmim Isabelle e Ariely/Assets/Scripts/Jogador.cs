@@ -52,7 +52,7 @@ public class Jogador : MonoBehaviour
         {
             Bloco bloco = other.GetComponent<Bloco>();
 
-            if (!bloco.PegarConquista)
+            if (!bloco.PegarConquistado())
             {
                 bloco.AlterarConquista(jogador1, corDoJogador);
             }
