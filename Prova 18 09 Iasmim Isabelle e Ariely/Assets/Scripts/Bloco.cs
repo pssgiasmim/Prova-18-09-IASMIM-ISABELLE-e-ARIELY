@@ -61,5 +61,8 @@ public class Bloco : MonoBehaviour
             return 2;
         }
     }
-
+    private void AtualizarCor(Color novaCor)
+    { 
+        spriteRenderer.color = novaCor;
+    }
 }
