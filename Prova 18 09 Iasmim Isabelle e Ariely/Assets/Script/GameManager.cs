@@ -40,7 +40,18 @@ public class GameManager : MonoBehaviour
                 GameObject bloco = Instantiate(blockPrefab, posicao, Quaternion.identity);
 
                 grade[i, j] = bloco;
+
             }
         }
+
+        // Posiciona os jogadores no início do jogo.
+        // Calcula a posição inicial do jogador 1.
+        // Calcula a posição inicial do jogador 2.
+
+        Camera.main.transform.position = new Vector3(linha / 2f - 0.5f, coluna / 2f - 0.5f, -10);
+        Camera.main.orthographicSize = coluna / 2f;
+
+        // Instancia os jogadores nas suas posições iniciais.
+
     }
 }
