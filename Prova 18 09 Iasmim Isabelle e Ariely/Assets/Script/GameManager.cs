@@ -28,17 +28,19 @@ public class GameManager : MonoBehaviour
 
         CriarGrade();
     }
-    
 
-    // Start is called before the first frame update
-    void Start()
+    public void CriarGrade()
     {
-        
-    }
+        for (int i = 0; i < linha; i++)
+        {
+            for (int j = 0; j < coluna; j++)
+            {
+                Vector2 posicao = new Vector2(i, j);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+                GameObject bloco = Instantiate(blockPrefab, posicao, Quaternion.identity);
+
+                grade[i, j] = bloco;
+            }
+        }
     }
 }
