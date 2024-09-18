@@ -9,31 +9,31 @@ public class Bloco : MonoBehaviour
 
     private bool conquistado = false;
     private SpriteRenderer spriteRenderer;
-    private int jogadorDono;
+    private int jogadorDono = 0;
 
     private void Awake()
     {
-       spriteRenderer = GetComponent<SpriteRenderer>(); //verificar se falta GameObject
+       spriteRenderer = GetComponent<SpriteRenderer>(); 
 
-        spriteRenderer.color = Color.white; // Verificar se é preciso utilizar método auxiliar que será criado      
+        spriteRenderer.color = Color.white;      
     }
 
     public void AlterarConquista(bool jogador1, Color corDoJogador)
     {
         conquistado = true;
-        Awake(); 
-        spriteRenderer.color = new Color(); //Rever chamada do método Awake
+        
+        spriteRenderer.color = new Color(); 
 
-        if (jogador1 == true )
+        if (jogador1)
         {
-          bool jogadorDono = true; // rever
-            
-            // notificar Game Manager
+          jogadorDono = 1;
+
+            GameManager.NotificarConquista(1); // notificar Game Manager
         }
         else  
         {
-           // bool jogadorDono = true; 
-           //notificar Game Manager
+            jogadorDono = 2;
+            GameManager.NotificarConquista(2);//notificar Game Manager
         }
     }
 
