@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-   
+    public int territorioJogador1, territorioJogador2;
+
     private void Awake()
     {
         instance = this;
@@ -72,7 +73,15 @@ public class GameManager : MonoBehaviour
                 {
                     Bloco bloco = grade[i, j].GetComponent<Bloco>();
 
-                    if (Bloco.PegarJogadorDono == 1)
+                    if (bloco. = territorioJogador1)
+                    {
+                        contadorDeTerritorioDoJogador1++;
+                    }
+                    else
+                    {
+                        contadorDeTerritorioDoJogador2++;
+                    }
+                    /*if (Bloco.PegarJogadorDono == 1)
                     {
                         contadorDeTerritorioDoJogador1++;
 
@@ -80,13 +89,15 @@ public class GameManager : MonoBehaviour
                     else if (Bloco.PegarJogadorDono == 2)
                     {
                         contadorDeTerritorioDoJogador2++;
-                    }
+                    }*/
                 }
             }
         }
+
+        FimDeJogo();
     }
 
-    private void FimDeJogo(int territorioJogador1, int territorioJogador2)
+    private void FimDeJogo()
     {
         string vencedor;
 

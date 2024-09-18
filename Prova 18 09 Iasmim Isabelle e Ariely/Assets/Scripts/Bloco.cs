@@ -50,13 +50,13 @@ public class Bloco : MonoBehaviour
            
     }
 
-    public int PegarJogadorDono(int jogador1 , bool jogadorDono)
+    public int PegarJogadorDono()
     {
-
-        if (jogadorDono == true)
+        if (jogadorDono == 1) ;
         {
-            return jogador1;
+            return 1;
         }
+
         else
         {
             return 2;
