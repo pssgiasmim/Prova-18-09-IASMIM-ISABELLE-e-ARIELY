@@ -13,7 +13,9 @@ public class GameManager : MonoBehaviour
 
     public float spacing = 1.1f;
 
+    private Bloco[,] blocos;
 
+    private int contador;
     // Start is called before the first frame update
     void Start()
     {
