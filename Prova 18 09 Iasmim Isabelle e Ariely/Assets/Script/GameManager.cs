@@ -65,18 +65,23 @@ public class GameManager : MonoBehaviour
         {
             int contadorDeTerritorioDoJogador1 = 0;
             int contadorDeTerritorioDoJogador2 = 0;
-        
-            foreach (Bloco bloco in grade)
-            {
-                if (bloco = )
-                {
-                    contadorDeTerritorioDoJogador1++;
-                }
-                if (bloco = )
-                {
-                    contadorDeTerritorioDoJogador2++;
-                }
 
+            for (int i = 0; i < linha; i++) 
+            {
+                for (int j = 0; j < coluna; j++)
+                {
+                    Bloco bloco = grade[i, j].GetComponent<Bloco>();
+
+                    if (bloco.dono == 1)
+                    {
+                        contadorDeTerritorioDoJogador1++;
+
+                    }
+                    else if (bloco.dono == 2)
+                    {
+                        contadorDeTerritorioDoJogador2++;
+                    }
+                }
             }
         }
     }
