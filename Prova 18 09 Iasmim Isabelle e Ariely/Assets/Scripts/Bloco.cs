@@ -37,16 +37,9 @@ public class Bloco : MonoBehaviour
         }
     }
 
-    public bool PegarConquistado(int jogadorDono)
+    public bool PegarConquistado()
     {
-        if (conquistado == true)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return conquistado = true && !conquistado;
            
     }
 
